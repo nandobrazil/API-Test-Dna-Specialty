@@ -1,0 +1,10 @@
+${AnsiColor.BRIGHT_YELLOW}           _____ _____    _____  _   _           _____                 _       _ _             ________                              _
+${AnsiColor.BRIGHT_YELLOW}     /\   |  __ \_   _|  |  __ \| \ | |   /\    / ____|               (_)     | | |           / /  ____|                            | |
+${AnsiColor.BRIGHT_YELLOW}    /  \  | |__) || |    | |  | |  \| |  /  \  | (___  _ __   ___  ___ _  __ _| | |_ _   _   / /| |__ ___ _ __ _ __   __ _ _ __   __| | ___
+${AnsiColor.BRIGHT_YELLOW}   / /\ \ |  ___/ | |    | |  | | . ` | / /\ \  \___ \| '_ \ / _ \/ __| |/ _` | | __| | | | / / |  __/ _ \ '__| '_ \ / _` | '_ \ / _` |/ _ \
+${AnsiColor.BRIGHT_YELLOW}  / ____ \| |    _| |_   | |__| | |\  |/ ____ \ ____) | |_) |  __/ (__| | (_| | | |_| |_| |/ /  | | |  __/ |  | | | | (_| | | | | (_| | (_) |
+${AnsiColor.BRIGHT_YELLOW} /_/    \_\_|   |_____|  |_____/|_| \_/_/    \_\_____/| .__/ \___|\___|_|\__,_|_|\__|\__, /_/   |_|  \___|_|  |_| |_|\__,_|_| |_|\__,_|\___/
+                                                      | |                             __/ |
+                                                      |_|                            |___/
+${AnsiColor.RED} LinkedIn in/nandobrazil ${AnsiColor.BRIGHT_WHITE}|${AnsiColor.RED} Personal website https://frinfo.com.br/
+${AnsiColor.BRIGHT_WHITE} API Test DNA Specialty  | developed by${AnsiColor.CYAN} Fernando Conde
