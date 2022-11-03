@@ -23,7 +23,7 @@ public class ModelMapperConfiguration {
 
     @Bean
     public ModelMapper modelMapper() {
-        final var modelMapper = new ModelMapper();
+        final ModelMapper modelMapper = new ModelMapper();
 
         modelMapper.getConfiguration().setMatchingStrategy(MatchingStrategies.STRICT);
 

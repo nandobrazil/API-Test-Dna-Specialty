@@ -51,17 +51,17 @@ public class OrderService {
     }
 
     public Page<Order> findAll(String filter, Pageable pageable) {
-        final var orders = this.orderRepository.findAllByFilter(filter, pageable);
+        final Page<Order> orders = this.orderRepository.findAllByFilter(filter, pageable);
         return orders;
     }
 
     public List<Order> findAllWithoutPage() {
-        final var orders = this.orderRepository.findAll();
+        final List<Order> orders = this.orderRepository.findAll();
         return orders;
     }
 
     public Order save(final OrderParamDto orderParamDto) {
-        final var order = this.modelMapper.map(orderParamDto, Order.class);
+        final Order order = this.modelMapper.map(orderParamDto, Order.class);
         this.fillOrderDtos(order, orderParamDto);
         return this.orderRepository.save(order);
     }

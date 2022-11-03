@@ -64,7 +64,7 @@ public class UserController {
     @GetMapping("/{id}")
     public ResponseEntity<ResponseBase<UserGridDto>> findById(@PathVariable(value = "id", required = true) Long id) {
         final User user = this.userService.find(id);
-        final var userGridDto = UserGridDto.from(user);
+        final UserGridDto userGridDto = UserGridDto.from(user);
         return ResponseEntity.ok(ResponseBase.of(userGridDto));
     }
 
@@ -73,20 +73,20 @@ public class UserController {
     public ResponseEntity<ResponseBase<CreateResponseDto>> update(
             @RequestBody @Valid final UserParamDto userParamDto,
             @PathVariable(name = "id") final Long idUser) {
-        final var user = this.userService.update(idUser, userParamDto);
+        final User user = this.userService.update(idUser, userParamDto);
         return ResponseEntity.ok(ResponseBase.of(new CreateResponseDto(user)));
     }
     @PostMapping
     @Transactional
     public ResponseEntity<ResponseBase<CreateResponseDto>> create(
             @RequestBody UserParamDto userParamDto) {
-        final var user = this.userService.save(userParamDto);
+        final User user = this.userService.save(userParamDto);
         return ResponseEntity.ok(ResponseBase.of(new CreateResponseDto(user)));
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<ResponseBase<DeleteResponseDto>> delete(@PathVariable(name = "id") Long id) {
-        final var userId = this.userService.delete(id);
+        final Long userId = this.userService.delete(id);
         return ResponseEntity.ok(ResponseBase.of(new DeleteResponseDto(userId)));
     }
 

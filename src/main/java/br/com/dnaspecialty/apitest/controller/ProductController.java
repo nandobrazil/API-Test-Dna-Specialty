@@ -63,7 +63,7 @@ public class ProductController {
     @GetMapping("/{id}")
     public ResponseEntity<ResponseBase<ProductGridDto>> findById(@PathVariable(value = "id", required = true) Long id) {
         final Product product = this.productService.find(id);
-        final var productDto = ProductGridDto.from(product);
+        final ProductGridDto productDto = ProductGridDto.from(product);
         return ResponseEntity.ok(ResponseBase.of(productDto));
     }
 
@@ -72,20 +72,20 @@ public class ProductController {
     public ResponseEntity<ResponseBase<CreateResponseDto>> update(
             @RequestBody @Valid final ProductParamDto productParamDto,
             @PathVariable(name = "id") final Long idProduct) {
-        final var product = this.productService.update(idProduct, productParamDto);
+        final Product product = this.productService.update(idProduct, productParamDto);
         return ResponseEntity.ok(ResponseBase.of(new CreateResponseDto(product)));
     }
     @PostMapping
     @Transactional
     public ResponseEntity<ResponseBase<CreateResponseDto>> create(
             @RequestBody ProductParamDto productParamDto) {
-        final var product = this.productService.save(productParamDto);
+        final Product product = this.productService.save(productParamDto);
         return ResponseEntity.ok(ResponseBase.of(new CreateResponseDto(product)));
     }
 
     @DeleteMapping("/{id}")
     public ResponseEntity<ResponseBase<DeleteResponseDto>> delete(@PathVariable(name = "id") Long id) {
-        final var idProduct = this.productService.delete(id);
+        final Long idProduct = this.productService.delete(id);
         return ResponseEntity.ok(ResponseBase.of(new DeleteResponseDto(idProduct)));
     }
 

@@ -31,7 +31,7 @@ public class ProductService {
     }
 
     public Page<Product> findAll(String filter, Pageable pageable) {
-        final var products = this.productRepository.findAllByFilter(filter, pageable);
+        final Page<Product> products = this.productRepository.findAllByFilter(filter, pageable);
         return products;
     }
 
@@ -44,7 +44,7 @@ public class ProductService {
             throw new BusinessException(errorMessage);
         }
 
-        final var product = this.modelMapper.map(productParamDto, Product.class);
+        final Product product = this.modelMapper.map(productParamDto, Product.class);
         return this.productRepository.save(product);
     }
 

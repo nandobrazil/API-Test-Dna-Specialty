@@ -18,14 +18,14 @@ public class ResponseBase<T> {
     private T data;
 
     public static <T> ResponseBase<T> of(final T data) {
-        final var response = new ResponseBase<T>();
+        final ResponseBase<T> response = new ResponseBase<T>();
         response.setData(data);
         response.setSuccess(true);
         return response;
     }
 
     public static <T> ResponseBase<T> empty() {
-        final var response = new ResponseBase<T>();
+        final ResponseBase<T> response = new ResponseBase<T>();
         response.setSuccess(true);
         return response;
     }

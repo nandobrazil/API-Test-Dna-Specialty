@@ -31,7 +31,7 @@ public class CustomerService {
     }
 
     public Page<Customer> findAll(String filter, Pageable pageable) {
-        final var customers = this.customerRepository.findAllByFilter(filter, pageable);
+        final Page<Customer> customers = this.customerRepository.findAllByFilter(filter, pageable);
         return customers;
     }
 
@@ -44,7 +44,7 @@ public class CustomerService {
             throw new BusinessException(errorMessage);
         }
 
-        final var customer = this.modelMapper.map(customerParamDto, Customer.class);
+        final Customer customer = this.modelMapper.map(customerParamDto, Customer.class);
         return this.customerRepository.save(customer);
     }
 

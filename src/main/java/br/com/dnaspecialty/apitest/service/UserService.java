@@ -32,7 +32,7 @@ public class UserService {
     }
 
     public Page<User> findAll(String filter, Pageable pageable) {
-        final var users = this.userRepository.findAllByFilter(filter, pageable);
+        final Page<User> users = this.userRepository.findAllByFilter(filter, pageable);
         return users;
     }
 
@@ -47,7 +47,7 @@ public class UserService {
             throw new BusinessException(errorMessage);
         }
 
-        final var user = this.modelMapper.map(userParamDto, User.class);
+        final User user = this.modelMapper.map(userParamDto, User.class);
         return this.userRepository.save(user);
     }
 
