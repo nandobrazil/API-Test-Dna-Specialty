@@ -14,8 +14,6 @@
 	<name>API-Test-Dna-Specialty</name>
 	<description>API developed for evaluation purposes in the company DNA Specialty</description>
 	<properties>
-		<java.version>11</java.version>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<maven.compiler.source>11</maven.compiler.source>
 		<maven.compiler.target>11</maven.compiler.target>
 	</properties>
@@ -64,7 +62,6 @@
 			<artifactId>spring-webmvc</artifactId>
 			<version>5.3.22</version>
 		</dependency>
-
 	</dependencies>
 
 	<build>
