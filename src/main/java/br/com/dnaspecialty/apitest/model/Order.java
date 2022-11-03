@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.Optional;
 
 @Entity
-@Table(name = "order", schema = "testdnaspecialty")
+@Table(name = "orders")
 public class Order extends EntityBasic {
 
     @ManyToOne

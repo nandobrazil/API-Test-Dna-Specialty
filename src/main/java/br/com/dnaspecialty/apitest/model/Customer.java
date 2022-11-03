@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.util.Set;
 
 @Entity
-@Table(name = "customer", schema = "testdnaspecialty")
+@Table(name = "customer")
 public class Customer extends EntityBasic {
 
     @Column(name = "corporate_name", length = 100, nullable = false)
